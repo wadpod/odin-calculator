@@ -210,37 +210,3 @@ function operate(operator, a, b) {
             throw new Error('Invalid operator');
     }
 }
-
-// Test the functions
-console.log('Testing math functions:');
-console.log('add(5, 3):', add(5, 3));         // Expected: 8
-console.log('subtract(10, 4):', subtract(10, 4)); // Expected: 6
-console.log('multiply(6, 7):', multiply(6, 7));   // Expected: 42
-console.log('divide(15, 3):', divide(15, 3));     // Expected: 5
-
-// Test the operate function
-console.log('\nTesting operate function:');
-console.log('operate("+", 5, 3):', operate('+', 5, 3));     // Expected: 8
-console.log('operate("-", 10, 4):', operate('-', 10, 4));   // Expected: 6
-console.log('operate("*", 6, 7):', operate('*', 6, 7));     // Expected: 42
-console.log('operate("/", 15, 3):', operate('/', 15, 3));   // Expected: 5
-
-// Error handling tests
-try {
-    console.log('Invalid input test:', add('5', 3));
-} catch (error) {
-    console.log('Error caught:', error.message);
-}
-
-try {
-    console.log('Division by zero test:', divide(10, 0));
-} catch (error) {
-    console.log('Error caught:', error.message);
-}
-
-// Error handling test for operate
-try {
-    console.log('Invalid operator test:', operate('%', 10, 5));
-} catch (error) {
-    console.log('Error caught:', error.message);
-}
